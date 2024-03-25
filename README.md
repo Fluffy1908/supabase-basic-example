@@ -40,6 +40,8 @@ Google
    ![Stripe variables](./public/stripe_variables.png)
    ![Webhook Variables](./public/stripe_webhook.png)
 
+5. Navigate to the SQL Editor, paste the contents of the Supabase schema.sql file, and click RUN to initialize the database.
+
 6. Change redirect URL to new vercel URL in supabase dashboard, "Authentication", "URL Configuration", and set SITE URL to new vercel URL.
 
 ## Step-by-step setup
