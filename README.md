@@ -40,6 +40,8 @@ Google
    ![Stripe variables](./public/stripe_variables.png)
    ![Webhook Variables](./public/stripe_webhook.png)
 
+6. Change redirect URL to new vercel URL in supabase dashboard, "Authentication", "URL Configuration", and set SITE URL to new vercel URL.
+
 ## Step-by-step setup
 
 When deploying this template, the sequence of steps is important. Follow the steps below in order to get up and running.
