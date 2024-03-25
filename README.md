@@ -36,7 +36,7 @@ GitHub
 Google
 ![Google](./public/google.png)
 
-5. Stripe variables to insert in "Environment Variables" section of vercel deployment. Redeploy app after you added env variables for changes to take effect. Here is all variables and where to take them on stripe dashboard app. !!For EndpointURL on webhooks, add vercel url followed by /api/webhooks. (https://your-deployment-url.vercel.app/api/webhooks)
+5. Stripe variables to insert in "Environment Variables" section of vercel deployment. Redeploy app after you added env variables for changes to take effect. Here is all variables and where to take them on stripe dashboard app. !!For EndpointURL on webhooks, add vercel url followed by /api/webhooks. Verify if its correct with new website url (https://your-deployment-url.vercel.app/api/webhooks)
    ![Stripe variables](./public/stripe_variables.png)
    ![Webhook Variables](./public/stripe_webhook.png)
 
