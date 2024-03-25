@@ -19,6 +19,27 @@ The all-in-one starter kit for high-performance SaaS applications.
 
 ![Architecture diagram](./public/architecture_diagram.svg)
 
+## My setup
+
+1. NEXT_PUBLIC_SITE_URL take from vercel after app is deployed. (e.g. https://your-deployment-url.vercel.app)
+   ![NEXT_PUBLIC_SITE_URL](./public/next_public_url.png)
+
+2. All supabase variables are taken from supabase website dashboard. I'll not show them on screenshots.
+   ![All supabase variables](./public/vercel_env.png)
+
+3. Github and Google Cloud screenshots of env variables and redirect links shown as example. (Assume own NEXT_PUBLIC_SITE_URL). For Authorization callback URL, use URL provided on supabase website. Go to "Dashboard", "Authentication", "Providers", Select "GitHub", there put GithubID and ClientSecret which you got from Github website. And after that copy callback URL from the called "Callback URL (for OAuth)" and insert it on your github account.
+
+For Google, login, got to "APIs & Services", "Credentials", on top "Create Credentials", "OAuth client ID", Application type "Web application", choose name, in Authorized JavaScript origins insert your NEXT_PUBLIC_SITE_URL, on "Authorized redirect URIs" insert URI from your supabase account, exactly as described with GitHub example. Then click create, you will see "Client ID" and "Client Secret". Copy then and insert in vercel env variables, redeploy app for them to take effect.
+
+GitHub
+![GitHub](./public/github.png)
+Google
+![Google](./public/google.png)
+
+5. Stripe variables to insert in "Environment Variables" section of vercel deployment. Redeploy app after you added env variables for changes to take effect. Here is all variables and where to take them on stripe dashboard app. !!For EndpointURL on webhooks, add vercel url followed by /api/webhooks. (https://your-deployment-url.vercel.app/api/webhooks)
+   ![Stripe variables](./public/stripe_variables.png)
+   ![Webhook Variables](./public/stripe_webhook.png)
+
 ## Step-by-step setup
 
 When deploying this template, the sequence of steps is important. Follow the steps below in order to get up and running.
@@ -257,4 +278,5 @@ To run the project in live mode and process payments with Stripe, switch Stripe 
 Afterward, you will need to rebuild your production deployment for the changes to take effect. Within your project Dashboard, navigate to the "Deployments" tab, select the most recent deployment, click the overflow menu button (next to the "Visit" button) and select "Redeploy" (do NOT enable the "Use existing Build Cache" option).
 
 To verify you are running in production mode, test checking out with the [Stripe test card](https://stripe.com/docs/testing). The test card should not work.
+
 # supabase-basic-example
